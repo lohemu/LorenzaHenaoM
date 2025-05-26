@@ -8,6 +8,7 @@ export const Home = () => (
       reconectar con su poder y su valor. Las guío para que vivan más ligeras, seguras y llenas de alegría."
       </p>
       <TestimonialCard nombre="Luigi" testimonio="Desde que Loren me enseñó a manejar el tiempo mi tensión arterial mejoró." foto="src/assets/luigi.jpg" />
+      <TestimonialCard nombre="Loren" testimonio="Las mentorías de Loren me ayudaron a priorizarme." foto="src/assets/Loren.jpg" />
       <div className="flex justify-center gap-6 mt-10">        
         <a
           href="/mentorias"
