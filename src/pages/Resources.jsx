@@ -10,7 +10,7 @@ export const Resources = () => (
       <div className="text-center mt-10">
         <a
           href="#"
-          className="bg-coralLoren text-white py-3 px-6 rounded-2xl shadow-md hover:scale-105 transition-transform"
+          className="bg-coralLoren text-black py-3 px-6 rounded-2xl shadow-md hover:scale-105 transition-transform"
         >
           Descarga los recursos
         </a>

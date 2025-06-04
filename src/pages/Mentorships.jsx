@@ -10,7 +10,7 @@ export const Mentorships = () => (
       <div className="text-center mt-10">
         <a
           href="/contacto"
-          className="bg-coralLoren text-white py-3 px-6 rounded-2xl shadow-md hover:scale-105 transition-transform"
+          className="bg-coralLoren text-black py-3 px-6 rounded-2xl shadow-md hover:scale-105 transition-transform"
         >
           Agenda tu sesión
         </a>
