@@ -1,6 +1,6 @@
 // Contact.jsx
 import React from 'react';
-import InputText from '../components/atoms/InputTextAtom';
+import {InputText}  from '../components/atoms/InputTextAtom';
 
 export const Contact = () => (
   <section className="max-w-4xl mx-auto px-4 py-20">
