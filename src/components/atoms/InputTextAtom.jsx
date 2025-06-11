@@ -1,7 +1,7 @@
 // atoms/InputText.jsx
 import React from 'react';
 
-export const InputText = ({ type = "text", placeholder, required = false, value, onChange, name }) => {
+export const InputTextAtom = ({ type = "text", placeholder, required = false, value, onChange, name }) => {
   return (
     <input
       type={type}
