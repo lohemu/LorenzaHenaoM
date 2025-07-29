@@ -17,6 +17,7 @@ export const Home = () => (
         testimonio="Desde que Loren me enseñó a manejar el tiempo mi tensión arterial mejoró." 
         foto="src/assets/luigi.jpg" 
       />
+      
       <TestimonialCard 
         nombre="Loren" 
         testimonio="Las mentorías de Loren me ayudaron a priorizarme." 
