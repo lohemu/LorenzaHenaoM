@@ -1,16 +1,13 @@
 //Código sugeruido por Copilot con base en los cambios hechos por Robotina
-
-import { NavBar } from "../components/NavBar";
 import { TestimonialCard } from "../components/TestimonialCard";
 
 export const Home = () => (
   <>
-  <NavBar />
   <section className="max-w-6xl mx-auto px-4 py-20 bg-fondo text-black font-montserrat flex flex-col items-center">
     <h1 className="text-5xl font-titulo mb-6 text-black drop-shadow-sm">
       Toma el control de tu tiempo y tu vida
     </h1>
-    <p className="text-lg mb-10 max-w-2xl text-center">
+    <p className="text-lg mb-10 max-w-2xl text-center font-montserrat">
       "Ayudo a mujeres que se sienten abrumadas, cansadas y fuera de control a vivir una transformación que les permita 
       reconectar con su poder y su valor. Las guío para que vivan más ligeras, seguras y llenas de alegría."
     </p>

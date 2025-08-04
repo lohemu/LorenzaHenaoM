@@ -1,6 +1,6 @@
-/* @import 'tailwindcss' */
+@import 'tailwindcss'
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat&display=swap');
 
 
 
@@ -10,10 +10,10 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #F2FBFF; /* color fondo */
+  background-color: #F2FBFF;
 }
 
-/* Ejemplo de uso de las fuentes y colores personalizados */
+/* Ejemplo de uso de las fuentes y colores personalizados 
 .font-titulo {
   font-family: 'Dancing Script', cursive;
 }
@@ -39,4 +39,4 @@ body {
 }
 
 
-
+ */
