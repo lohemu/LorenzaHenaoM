@@ -6,8 +6,8 @@ import NavItem from '../molecules/NavItem';
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
-      <Container className="flex h-16 items-center justify-between">
-        <Link to="/" className="font-bold text-lg">Lorenza</Link>
+      <Container className="flex h-20 items-center justify-between">
+        <Link to="/" className="test-font font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl">Lorenza Henao M</Link>
         <nav className="hidden md:flex items-center gap-2">
           <NavItem to="/">Inicio</NavItem>
           <NavItem to="/sobre-mi">Sobre mí</NavItem>

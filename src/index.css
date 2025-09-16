@@ -1,1 +1,9 @@
-@import 'tailwindcss';
+/* Google Fonts: Dancing Script y Montserrat */
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Montserrat:wght@400;700&display=swap'); */
+
+/* Tailwind debe ir después */
+@import "tailwindcss";
+
+.test-font {
+  font-family: 'Dancing Script', cursive;
+} 
