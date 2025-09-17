@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
-import { AboutMe } from './pages/AboutMe';
+import { AboutSection } from './pages/AboutSection';
 import { Mentorships } from './pages/Mentorships';
 import { Resources } from './pages/Resources';
 import { Contact } from './pages/Contact';
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/sobre-mi" element={<AboutMe />} />
+        <Route path="/sobre-mi" element={<AboutSection />} />
         <Route path="/mentorias" element={<Mentorships />} />
         <Route path="/recursos" element={<Resources />} />
         <Route path="/contacto" element={<Contact />} />
