@@ -6,13 +6,13 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-gray-800 via-blue-main/80 to-lavender/60 text-grey relative overflow-hidden">
       {/* Elementos decorativos */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-32 h-32 border border-white rounded-full"></div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 bg-white rounded-full opacity-5"></div>
-        <div className="absolute top-1/2 left-1/4 w-4 h-4 bg-pink-400 rounded-full"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-6 h-6 bg-purple-400 rounded-full opacity-50"></div>
+        <div className="absolute top-20 left-20 w-32 h-32 border border-white rounded-full decorative-blob"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 bg-white rounded-full opacity-5 decorative-blob" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/4 w-4 h-4 bg-coral rounded-full"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-6 h-6 bg-mint rounded-full opacity-50"></div>
       </div>
 
       <Container className="relative z-10">
@@ -22,20 +22,20 @@ export default function Footer() {
             {/* Columna principal - Información de la empresa */}
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-500 rounded-3xl flex items-center justify-center shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-coral to-coral-dark rounded-3xl flex items-center justify-center shadow-lg">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
                 <div>
-                  <div className="logo-font text-3xl text-transparent bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text">
+                  <div className="logo-font text-3xl text-gradient-blue-lavender font-bold">
                     Lorenza Henao
                   </div>
-                  <div className="text-sm text-gray-300 -mt-1">Mentora Certificada</div>
+                  <div className="text-sm text-gray-300 -mt-1 font-montserrat"></div>
                 </div>
               </div>
               
-              <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md">
+              <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md font-montserrat">
                 Transformando vidas a través de la mentoría personalizada. 
                 Te acompaño en tu viaje hacia el crecimiento personal y profesional.
               </p>
@@ -49,20 +49,20 @@ export default function Footer() {
               </div>
 
               {/* CTA Newsletter */}
-              <div className="bg-gradient-to-r from-pink-500/10 to-purple-500/10 backdrop-blur-sm rounded-3xl p-6 border border-white/10">
-                <h4 className="text-lg font-semibold mb-2 text-white">
+              <div className="glass-mint rounded-3xl p-6 border border-mint/20">
+                <h4 className="text-lg font-montserrat font-semibold mb-2 text-white">
                   Mantente conectada
                 </h4>
-                <p className="text-gray-300 text-sm mb-4">
+                <p className="text-gray-300 text-sm mb-4 font-montserrat">
                   Recibe consejos exclusivos cada semana
                 </p>
                 <div className="flex gap-3">
                   <input
                     type="email"
                     placeholder="tu@email.com"
-                    className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-pink-400 transition-colors"
+                    className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-coral transition-colors font-montserrat"
                   />
-                  <Button className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 px-6 py-2 rounded-full text-sm font-medium">
+                  <Button className="bg-gradient-to-r from-coral to-coral-dark hover:from-coral-dark hover:to-coral px-6 py-2 rounded-full text-sm font-montserrat font-medium">
                     Suscribir
                   </Button>
                 </div>
@@ -71,35 +71,35 @@ export default function Footer() {
 
             {/* Columna de navegación */}
             <div>
-              <h4 className="text-lg font-semibold mb-6 text-white">Navegación</h4>
+              <h4 className="text-lg font-montserrat font-semibold mb-6 text-white">Navegación</h4>
               <ul className="space-y-4">
                 <li>
-                  <Link to="/" className="text-gray-300 hover:text-pink-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">
+                  <Link to="/" className="text-gray-300 hover:text-coral transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat">
                     Inicio
                   </Link>
                 </li>
                 <li>
-                  <Link to="/sobre-mi" className="text-gray-300 hover:text-pink-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">
+                  <Link to="/sobre-mi" className="text-gray-300 hover:text-coral transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat">
                     Sobre Mí
                   </Link>
                 </li>
                 <li>
-                  <Link to="/mentorias" className="text-gray-300 hover:text-pink-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">
+                  <Link to="/mentorias" className="text-gray-300 hover:text-coral transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat">
                     Mentorías
                   </Link>
                 </li>
                 <li>
-                  <Link to="/recursos" className="text-gray-300 hover:text-pink-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">
+                  <Link to="/recursos" className="text-gray-300 hover:text-coral transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat">
                     Recursos
                   </Link>
                 </li>
                 <li>
-                  <Link to="/testimonios" className="text-gray-300 hover:text-pink-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">
+                  <Link to="/testimonios" className="text-gray-300 hover:text-coral transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat">
                     Testimonios
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contacto" className="text-gray-300 hover:text-pink-400 transition-colors duration-300 hover:translate-x-1 transform inline-block">
+                  <Link to="/contacto" className="text-gray-300 hover:text-coral transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat">
                     Contacto
                   </Link>
                 </li>
@@ -108,42 +108,42 @@ export default function Footer() {
 
             {/* Columna de contacto */}
             <div>
-              <h4 className="text-lg font-semibold mb-6 text-white">Contacto</h4>
+              <h4 className="text-lg font-montserrat font-semibold mb-6 text-white">Contacto</h4>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-10 h-10 bg-gradient-to-br from-coral/20 to-coral-dark/20 rounded-full flex items-center justify-center">
+                    <svg className="w-5 h-5 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400">Email</p>
-                    <p className="text-gray-300">hola@lorenzahenao.com</p>
+                    <p className="text-sm text-gray-400 font-montserrat">Email</p>
+                    <p className="text-gray-300 font-montserrat">hola@lorenzahenao.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-10 h-10 bg-gradient-to-br from-mint/20 to-mint-dark/20 rounded-full flex items-center justify-center">
+                    <svg className="w-5 h-5 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400">Teléfono</p>
-                    <p className="text-gray-300">+57 (300) 123-4567</p>
+                    <p className="text-sm text-gray-400 font-montserrat">Teléfono</p>
+                    <p className="text-gray-300 font-montserrat">+57 (300) 123-4567</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-main/20 to-lavender/20 rounded-full flex items-center justify-center">
+                    <svg className="w-5 h-5 text-blue-main" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400">Ubicación</p>
-                    <p className="text-gray-300">Manizales, Colombia</p>
+                    <p className="text-sm text-gray-400 font-montserrat">Ubicación</p>
+                    <p className="text-gray-300 font-montserrat">Manizales, Colombia</p>
                   </div>
                 </div>
               </div>
@@ -153,7 +153,7 @@ export default function Footer() {
                 <Button 
                   as={Link} 
                   to="/contacto"
-                  className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white py-3 rounded-2xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                  className="w-full bg-gradient-to-r from-coral to-coral-dark hover:from-coral-dark hover:to-coral text-white py-3 rounded-2xl font-montserrat font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                 >
                   Agenda tu sesión
                 </Button>
@@ -167,18 +167,18 @@ export default function Footer() {
 
         {/* Footer bottom */}
         <div className="py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-400 text-sm font-montserrat">
             © {currentYear} Lorenza Henao. Todos los derechos reservados.
           </p>
           
-          <div className="flex items-center gap-6 text-sm">
-            <Link to="/privacidad" className="text-gray-400 hover:text-pink-400 transition-colors duration-300">
+          <div className="flex items-center gap-6 text-sm font-montserrat">
+            <Link to="/privacidad" className="text-gray-400 hover:text-coral transition-colors duration-300">
               Política de Privacidad
             </Link>
-            <Link to="/terminos" className="text-gray-400 hover:text-pink-400 transition-colors duration-300">
+            <Link to="/terminos" className="text-gray-400 hover:text-coral transition-colors duration-300">
               Términos de Uso
             </Link>
-            <Link to="/cookies" className="text-gray-400 hover:text-pink-400 transition-colors duration-300">
+            <Link to="/cookies" className="text-gray-400 hover:text-coral transition-colors duration-300">
               Cookies
             </Link>
           </div>
@@ -224,7 +224,7 @@ function SocialLink({ href, icon }) {
   return (
     <a
       href={href}
-      className="w-12 h-12 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:from-pink-500/30 hover:to-purple-500/30 transition-all duration-300 hover:scale-110"
+      className="w-12 h-12 bg-gradient-to-br from-coral/20 to-lavender/20 rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:from-coral/30 hover:to-lavender/30 transition-all duration-300 hover:scale-110"
       target="_blank"
       rel="noopener noreferrer"
     >

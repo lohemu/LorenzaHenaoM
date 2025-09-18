@@ -11,8 +11,8 @@ const services = [
     price: "$85",
     period: "/sesión",
     popular: false,
-    gradient: "from-blue-400 to-blue-600",
-    bgGradient: "from-blue-50 to-cyan-50"
+    gradient: "from-blue-main to-blue-dark",
+    bgGradient: "from-blue-light to-blue-main/10"
   },
   {
     title: "Programa Transformación",
@@ -21,8 +21,8 @@ const services = [
     price: "$297",
     period: "/mes",
     popular: true,
-    gradient: "from-pink-500 to-purple-600",
-    bgGradient: "from-pink-50 to-purple-50"
+    gradient: "from-coral to-coral-dark",
+    bgGradient: "from-coral/10 to-coral/20"
   },
   {
     title: "Mentoría Grupal",
@@ -31,35 +31,35 @@ const services = [
     price: "$45",
     period: "/sesión",
     popular: false,
-    gradient: "from-green-400 to-emerald-600",
-    bgGradient: "from-green-50 to-emerald-50"
+    gradient: "from-mint to-mint-dark",
+    bgGradient: "from-mint/20 to-mint/30"
   }
 ];
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-purple-50/30 relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-gradient-soft-lavender relative overflow-hidden">
       {/* Elementos decorativos de fondo */}
-      <div className="absolute top-20 left-10 w-20 h-20 border border-pink-200 rounded-full opacity-30"></div>
-      <div className="absolute bottom-32 right-20 w-16 h-16 bg-purple-100 rounded-full opacity-40"></div>
-      <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-pink-400 rounded-full"></div>
-      <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-purple-400 rounded-full opacity-60"></div>
+      <div className="absolute top-20 left-10 w-20 h-20 border border-coral/20 rounded-full opacity-40 decorative-blob"></div>
+      <div className="absolute bottom-32 right-20 w-16 h-16 bg-mint/30 rounded-full opacity-50 decorative-blob" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-blue-main rounded-full opacity-60"></div>
+      <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-lavender rounded-full opacity-50"></div>
 
       <Container>
         {/* Header de la sección */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 bg-gradient-to-r from-pink-100 to-purple-100 text-purple-600 rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-light to-lavender/40 text-blue-main rounded-full text-sm font-montserrat font-medium mb-4">
             Servicios de Mentoría
           </span>
           
-          <Heading level={2} className="text-4xl lg:text-5xl font-light mb-6 max-w-3xl mx-auto">
+          <Heading level={2} className="text-4xl lg:text-5xl font-montserrat font-light mb-6 max-w-3xl mx-auto text-gray-800">
             Descubre los secretos del
-            <span className="block font-dancing text-pink-500 text-5xl lg:text-6xl mt-2">
+            <span className="block font-dancing text-coral-dark text-5xl lg:text-6xl mt-2">
               éxito y la felicidad
             </span>
           </Heading>
           
-          <Text className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <Text className="text-lg text-gray-600 max-w-2xl mx-auto font-montserrat">
             Maximiza tu potencial ahora con nuestros paquetes de mentoría diseñados 
             especialmente para tu crecimiento personal y profesional.
           </Text>
@@ -71,13 +71,13 @@ export default function ServicesSection() {
             <div key={service.title} className="relative group">
               {service.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                  <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg">
+                  <span className="bg-gradient-to-r from-coral to-coral-dark text-white px-6 py-2 rounded-full text-sm font-montserrat font-medium shadow-lg">
                     Más Popular
                   </span>
                 </div>
               )}
               
-              <div className={`relative bg-gradient-to-br ${service.bgGradient} rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${service.popular ? 'border-2 border-pink-200 scale-105' : 'hover:scale-105'} h-full`}>
+              <div className={`relative bg-gradient-to-br ${service.bgGradient} rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${service.popular ? 'border-2 border-coral/30 scale-105' : 'hover:scale-105'} h-full card-hover`}>
                 {/* Elementos decorativos */}
                 <div className="absolute top-4 right-4">
                   <div className={`w-3 h-3 bg-gradient-to-br ${service.gradient} rounded-full opacity-60`}></div>
@@ -107,11 +107,11 @@ export default function ServicesSection() {
                   </div>
                 </div>
 
-                <Heading level={3} className="text-xl font-semibold text-gray-800 mb-3">
+                <Heading level={3} className="text-xl font-montserrat font-semibold text-gray-800 mb-3">
                   {service.title}
                 </Heading>
                 
-                <Text className="text-gray-600 mb-6 text-sm leading-relaxed">
+                <Text className="text-gray-600 mb-6 text-sm leading-relaxed font-montserrat">
                   {service.description}
                 </Text>
 
@@ -123,22 +123,22 @@ export default function ServicesSection() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       </div>
-                      <span className="text-gray-600 text-sm">{feature}</span>
+                      <span className="text-gray-600 text-sm font-montserrat">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <div className="mb-6">
                   <div className="flex items-baseline gap-1">
-                    <span className={`text-4xl font-bold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
+                    <span className={`text-4xl font-montserrat font-bold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
                       {service.price}
                     </span>
-                    <span className="text-gray-500 text-sm">{service.period}</span>
+                    <span className="text-gray-500 text-sm font-montserrat">{service.period}</span>
                   </div>
                 </div>
 
                 <Button 
-                  className={`w-full bg-gradient-to-r ${service.gradient} hover:shadow-lg text-white py-3 rounded-2xl font-medium transition-all duration-300 ${service.popular ? 'shadow-lg' : ''}`}
+                  className={`w-full bg-gradient-to-r ${service.gradient} hover:shadow-lg text-white py-3 rounded-2xl font-montserrat font-medium transition-all duration-300 ${service.popular ? 'shadow-lg' : ''}`}
                 >
                   Comenzar ahora
                 </Button>
@@ -149,22 +149,22 @@ export default function ServicesSection() {
 
         {/* CTA adicional */}
         <div className="text-center">
-          <div className="bg-white rounded-3xl p-8 shadow-lg max-w-2xl mx-auto">
+          <div className="bg-white rounded-3xl p-8 shadow-lg max-w-2xl mx-auto glass">
             <div className="mb-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full mx-auto flex items-center justify-center shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-br from-lavender to-lavender-dark rounded-full mx-auto flex items-center justify-center shadow-lg">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
             </div>
-            <Heading level={3} className="text-2xl font-semibold text-gray-800 mb-3">
+            <Heading level={3} className="text-2xl font-montserrat font-semibold text-gray-800 mb-3">
               ¿No estás seguro cuál elegir?
             </Heading>
-            <Text className="text-gray-600 mb-6">
+            <Text className="text-gray-600 mb-6 font-montserrat">
               Agenda una consulta gratuita de 30 minutos y te ayudo a encontrar 
               el programa perfecto para ti.
             </Text>
-            <Button className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300">
+            <Button className="bg-gradient-to-r from-coral to-coral-dark hover:from-coral-dark hover:to-coral text-white px-8 py-3 rounded-full font-montserrat font-medium shadow-lg hover:shadow-xl transition-all duration-300">
               Consulta Gratuita
             </Button>
           </div>
