@@ -1,7 +1,3 @@
-/* Google Fonts: Dancing Script y Montserrat */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
-
-/* Tailwind debe ir después */
 @import "tailwindcss";
 
 /* Variables CSS para la nueva paleta */

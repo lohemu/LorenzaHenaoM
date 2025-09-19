@@ -85,53 +85,7 @@ export default function AboutSection() {
 
 
 
-            {/* <div className="mb-8">
-              <Heading level={3} className="text-xl font-montserrat font-semibold text-gray-800 mb-4">
-                Lo q
-              </Heading>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-gradient-to-br from-mint to-mint-dark rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <Text className="text-gray-600 font-montserrat">
-                    <strong>Mentoría personalizada</strong> adaptada a tus necesidades específicas
-                  </Text>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-gradient-to-br from-blue-main to-blue-dark rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <Text className="text-gray-600 font-montserrat">
-                    <strong>Desarrollo de habilidades</strong> de liderazgo y comunicación efectiva
-                  </Text>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-gradient-to-br from-lavender to-lavender-dark rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <Text className="text-gray-600 font-montserrat">
-                    <strong>Estrategias prácticas</strong> para superar obstáculos y alcanzar metas
-                  </Text>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-gradient-to-br from-coral to-coral-dark rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <Text className="text-gray-600 font-montserrat">
-                    <strong>Acompañamiento continuo</strong> en tu proceso de crecimiento personal
-                  </Text>
-                </li>
-              </ul>
-            </div> */}
+            
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-gradient-to-r from-coral to-coral-dark hover:from-coral-dark hover:to-coral text-white px-8 py-3 rounded-full font-montserrat font-medium shadow-lg hover:shadow-xl transition-all duration-300">

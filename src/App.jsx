@@ -1,22 +1,25 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
 import { Home } from './pages/Home';
-import { AboutSection } from './pages/AboutSection';
-import { Mentorships } from './pages/Mentorships';
-import { Resources } from './pages/Resources';
-import { Contact } from './pages/Contact';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+
+// Componente para controlar el scroll
+function ScrollToTop() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return null;
+}
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/sobre-mi" element={<AboutSection />} />
-        <Route path="/mentorias" element={<Mentorships />} />
-        <Route path="/recursos" element={<Resources />} />
-        <Route path="/contacto" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>

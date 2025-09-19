@@ -2,22 +2,32 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Container from '../atoms/Container';
 import NavBar from './NavBar';
+import { handleNavigation } from './NavBar'; // Importar la función de navegación
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  // Función para manejar click en el logo/nombre
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    handleNavigation('inicio'); // Navegar al inicio/hero
+  };
+
   return (
     <header 
       className="sticky top-0 z-50 backdrop-blur-md border-b border-white/30 shadow-lg"
       style={{
-        background: 'linear-gradient(to right, rgba(242, 251, 255, 0.85), rgba(255, 185, 167, 0.85))'
+        background: 'linear-gradient(to right, #F2FBFF, #C7B8EA)'
       }}
     >
       <Container className="flex h-20 items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 group">
+        <button 
+          onClick={handleLogoClick}
+          className="flex items-center gap-3 group cursor-pointer transition-all duration-300 hover:scale-105"
+        >
           {/* <div 
             className="w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105"
             style={{
@@ -30,14 +40,15 @@ export default function Header() {
           </div> */}
           <div className="hidden sm:block">
             <div 
-              className="logo-font text-coral-dark  text-2xl lg:text-3xl font-bold drop-shadow-lg"  >
+              className="logo-font text-coral-dark text-2xl lg:text-3xl font-bold drop-shadow-lg group-hover:text-coral transition-colors duration-300"
+            >
               Lorenza Henao M
             </div>
-            <div className="text-xs text-blue-dark/80 -mt-1 font-montserrat font-medium drop-shadow-md">
+            <div className="text-xs text-blue-dark/80 -mt-1 font-montserrat font-medium drop-shadow-md group-hover:text-blue-main transition-colors duration-300">
               
             </div>
           </div>
-        </Link>
+        </button>
 
         {/* Navegación - usando el componente NavBar */}
         <NavBar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
@@ -170,4 +181,3 @@ function SocialIcon({ href, icon, label, mobile = false }) {
     </a>
   );
 }
-

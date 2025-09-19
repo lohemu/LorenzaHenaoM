@@ -2,19 +2,15 @@ import Container from '../atoms/Container';
 import Heading from '../atoms/Heading';
 import Text from '../atoms/Text';
 import Button from '../atoms/Button';
-import AboutSection from '../organisms/AboutSection';
-import ServicesSection from '../organisms/ServicesSection';
-import TestimonialsSection from '../organisms/TestimonialsSection';
-import CTASection from '../organisms/CTASection';
-import BlogSection from '../organisms/BlogSection';
+
 
 import FotoLoren from '../../assets/img/FotoLoren.png';
-
 
 export default function Hero() {
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-soft-blue min-h-screen flex items-center pattern-dots">
+      {/* Sección Principal - Hero */}
+      <section id="inicio" className="relative overflow-hidden bg-gradient-soft-blue min-h-screen flex items-center pattern-dots">
         {/* Elementos decorativos de fondo */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-4 h-4 bg-coral rounded-full opacity-60 animate-pulse"></div>
@@ -62,7 +58,10 @@ export default function Hero() {
             </Text>
             
             <div className="flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-              <Button className="bg-gradient-to-r from-coral to-coral-dark hover:from-coral-dark hover:to-coral text-white px-8 py-4 rounded-full text-lg font-montserrat font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 btn-coral-hover">
+              <Button 
+                onClick={() => document.getElementById('sobre-mi')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-gradient-to-r from-coral to-coral-dark hover:from-coral-dark hover:to-coral text-white px-8 py-4 rounded-full text-lg font-montserrat font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 btn-coral-hover"
+              >
                 Descubre más
               </Button>
               <a 
@@ -113,7 +112,7 @@ export default function Hero() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
-                <span className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors duration-300 font-montserrat">Claridad</span>
+                <span className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors duration-300 font-montserrar">Claridad</span>
               </div>
             </div>
           </div>
@@ -126,11 +125,10 @@ export default function Hero() {
               <div className="w-full h-full bg-gradient-soft-blue flex items-center justify-center relative">
                 <div className="text-center">
                   <img 
-    src={FotoLoren} 
-    alt="Lorenza" 
-    className="w-full h-full object-cover"
-  />
-                  
+                    src={FotoLoren} 
+                    alt="Lorenza" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 {/* Overlay decorativo */}
@@ -150,12 +148,7 @@ export default function Hero() {
         </Container>
       </section>
 
-      {/* Agregar todas las secciones adicionales */}
-      <AboutSection />
-      <ServicesSection />
-      <TestimonialsSection />
-      <CTASection />
-      <BlogSection />
+      
     </>
   );
 }
