@@ -40,10 +40,10 @@ export default function Hero() {
 
             <Heading 
               level={1} 
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-montserrat font-light leading-tight mb-6 text-gray-800 animate-fade-in-up"
+              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-montserrat font-light leading-tight mb-6 text-gray-800 animate-fade-in-up"
             >
               Sé tu prioridad, organiza tu vida, 
-              <span className="block font-dancing text-coral-dark text-5xl md:text-6xl lg:text-7xl xl:text-8xl mt-2 animate-fade-in-left" style={{ animationDelay: '0.2s' }}>
+              <span className="block font-dancing text-coral-dark text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-2 animate-fade-in-left" style={{ animationDelay: '0.2s' }}>
                 recupera tu energía y reconecta con tu poder y tu valor.
               </span>
             </Heading>
@@ -57,7 +57,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <Text className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0 animate-fade-in-up font-montserrat" style={{ animationDelay: '0.4s' }}>
+            <Text className="text-lg md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0 animate-fade-in-up font-montserrat" style={{ animationDelay: '0.4s' }}>
               Te acompaño a transformar el caos y la rutina en una vida plena, llena de propósito, disciplina y valor.
             </Text>
             

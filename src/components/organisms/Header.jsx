@@ -9,20 +9,31 @@ export default function Header() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="sticky top-0 z-50 bg-gradient-to-br from-gray-800 via-blue-main/80 to-lavender/60 backdrop-blur-md border-b border-blue-main/30 shadow-lg">
+    <header 
+      className="sticky top-0 z-50 backdrop-blur-md border-b border-white/30 shadow-lg"
+      style={{
+        background: 'linear-gradient(to right, rgba(242, 251, 255, 0.85), rgba(255, 185, 167, 0.85))'
+      }}
+    >
       <Container className="flex h-20 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-12 h-12 bg-gradient-to-br from-blue-main to-blue-dark rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+          {/* <div 
+            className="w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105"
+            style={{
+              background: 'linear-gradient(to bottom right, #7BCBFF, #5BA8D6)'
+            }}
+          >
             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
-          </div>
+          </div> */}
           <div className="hidden sm:block">
-            <div className="logo-font text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-main to-blue-dark bg-clip-text text-transparent">
+            <div 
+              className="logo-font text-coral-dark  text-2xl lg:text-3xl font-bold drop-shadow-lg"  >
               Lorenza Henao M
             </div>
-            <div className="text-xs text-blue-dark/70 -mt-1 font-montserrat font-medium">
+            <div className="text-xs text-blue-dark/80 -mt-1 font-montserrat font-medium drop-shadow-md">
               
             </div>
           </div>
@@ -32,7 +43,7 @@ export default function Header() {
         <NavBar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
 
         {/* Redes Sociales Desktop */}
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-4">
           <SocialIcon 
             href="https://facebook.com/lorenzahenao" 
             icon="facebook"
@@ -53,7 +64,7 @@ export default function Header() {
         {/* Botón menú móvil */}
         <button
           onClick={toggleMenu}
-          className="lg:hidden w-10 h-10 bg-blue-main/20 rounded-xl flex items-center justify-center text-blue-dark hover:bg-blue-main/40 hover:text-white transition-all duration-300 shadow-md"
+          className="lg:hidden w-10 h-10 bg-blue-main/20 rounded-xl flex items-center justify-center text-blue-dark hover:bg-blue-main/40 hover:text-white transition-all duration-300 shadow-md backdrop-blur-sm"
         >
           <svg 
             className={`w-6 h-6 transition-transform duration-300 ${isMenuOpen ? 'rotate-90' : ''}`} 
@@ -74,16 +85,21 @@ export default function Header() {
       <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
         isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
       }`}>
-        <div className="bg-lavender/95 backdrop-blur-md border-t border-blue-main/30 shadow-lg">
+        <div 
+          className="backdrop-blur-md border-t border-blue-main/30 shadow-lg"
+          style={{
+            background: 'linear-gradient(to right, rgba(199, 184, 234, 0.9), rgba(242, 251, 255, 0.9))'
+          }}
+        >
           <Container className="py-6">
             <NavBar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
             
             {/* Redes Sociales Móvil */}
             <div className="pt-4 border-t border-blue-main/30 mt-4">
-              <p className="text-blue-dark font-montserrat font-medium text-sm mb-3">
+              <p className="text-blue-dark font-montserrat font-medium text-sm mb-3 drop-shadow-sm">
                 Sígueme en redes sociales
               </p>
-              <div className="flex justify-center gap-4">
+              <div className="flex justify-center gap-5">
                 <SocialIcon 
                   href="https://facebook.com/lorenzahenao" 
                   icon="facebook"
@@ -135,14 +151,18 @@ function SocialIcon({ href, icon, label, mobile = false }) {
       rel="noopener noreferrer"
       className={`group ${
         mobile
-          ? 'w-12 h-12 bg-blue-main/20 hover:bg-blue-main text-blue-dark hover:text-white'
-          : 'w-10 h-10 bg-blue-main/20 hover:bg-blue-main text-blue-dark hover:text-white'
-      } rounded-full flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105`}
+          ? 'w-14 h-14 hover:shadow-xl'
+          : 'w-12 h-12 hover:shadow-lg'
+      } rounded-full flex items-center justify-center transition-all duration-300 shadow-md transform hover:scale-110 backdrop-blur-sm`}
+      style={{
+        backgroundColor: '#5BA8D6',
+        color: 'white'
+      }}
       aria-label={label}
     >
       <svg 
-        className={`${mobile ? 'w-6 h-6' : 'w-5 h-5'}`}
-        fill="currentColor" 
+        className={`${mobile ? 'w-8 h-8' : 'w-7 h-7'}`}
+        fill="white" 
         viewBox="0 0 24 24"
       >
         {iconMap[icon]}
@@ -150,3 +170,4 @@ function SocialIcon({ href, icon, label, mobile = false }) {
     </a>
   );
 }
+
