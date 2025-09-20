@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Container from '../atoms/Container';
-import NavBar from './NavBar';
+import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Container } from '../atoms/Container';
+import { NavBar } from './NavBar';
 import { handleNavigation } from './NavBar'; // Importar la función de navegación
 
-export default function Header() {
+export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -19,7 +20,7 @@ export default function Header() {
     <header 
       className="sticky top-0 z-50 backdrop-blur-md border-b border-white/30 shadow-lg"
       style={{
-        background: 'linear-gradient(to right, #F2FBFF, #C7B8EA)'
+        background: 'linear-gradient(to right, rgba(242, 251, 255, 0.85), rgba(199, 184, 234, 0.85))'
       }}
     >
       <Container className="flex h-20 items-center justify-between">
@@ -28,19 +29,9 @@ export default function Header() {
           onClick={handleLogoClick}
           className="flex items-center gap-3 group cursor-pointer transition-all duration-300 hover:scale-105"
         >
-          {/* <div 
-            className="w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105"
-            style={{
-              background: 'linear-gradient(to bottom right, #7BCBFF, #5BA8D6)'
-            }}
-          >
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div> */}
           <div className="hidden sm:block">
             <div 
-              className="logo-font text-coral-dark text-2xl lg:text-3xl font-bold drop-shadow-lg group-hover:text-coral transition-colors duration-300"
+              className="logo-font text-blue-dark text-2xl lg:text-3xl font-bold drop-shadow-lg group-hover:text-coral transition-colors duration-300"
             >
               Lorenza Henao M
             </div>
@@ -107,7 +98,7 @@ export default function Header() {
             
             {/* Redes Sociales Móvil */}
             <div className="pt-4 border-t border-blue-main/30 mt-4">
-              <p className="text-blue-dark font-montserrat font-medium text-sm mb-3 drop-shadow-sm">
+              <p className="text-lavender font-montserrat font-medium text-sm mb-3 drop-shadow-sm">
                 Sígueme en redes sociales
               </p>
               <div className="flex justify-center gap-5">
@@ -138,22 +129,15 @@ export default function Header() {
   );
 }
 
-// Componente para iconos de redes sociales
+// Componente para iconos de redes sociales con Lucide React
 function SocialIcon({ href, icon, label, mobile = false }) {
-  const iconMap = {
-    facebook: (
-      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-    ),
-    instagram: (
-      <>
-        <path d="M12.017 0C8.396 0 7.929.016 6.684.08 5.441.145 4.59.299 3.846.526a7.86 7.86 0 0 0-2.834 1.847A7.86 7.86 0 0 0 .186 5.207C-.041 5.95-.195 6.802-.26 8.045-.324 9.29-.34 9.758-.34 13.378c0 3.621.016 4.089.08 5.334.065 1.243.219 2.095.446 2.838a7.86 7.86 0 0 0 1.847 2.834 7.86 7.86 0 0 0 2.834 1.847c.744.227 1.596.381 2.838.446 1.245.064 1.713.08 5.334.08 3.621 0 4.089-.016 5.334-.08 1.243-.065 2.095-.219 2.838-.446a7.86 7.86 0 0 0 2.834-1.847 7.86 7.86 0 0 0 1.847-2.834c.227-.744.381-1.596.446-2.838.064-1.245.08-1.713.08-5.334 0-3.621-.016-4.089-.08-5.334-.065-1.243-.219-2.095-.446-2.838a7.86 7.86 0 0 0-1.847-2.834A7.86 7.86 0 0 0 18.792.526C18.049.299 17.197.145 15.954.08 14.709.016 14.241 0 10.621 0h1.396z" />
-        <path d="M12.017 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.846-10.405a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z" />
-      </>
-    ),
-    linkedin: (
-      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-    ),
+  const iconComponents = {
+    facebook: Facebook,
+    instagram: Instagram,
+    linkedin: Linkedin,
   };
+
+  const IconComponent = iconComponents[icon];
 
   return (
     <a
@@ -166,18 +150,15 @@ function SocialIcon({ href, icon, label, mobile = false }) {
           : 'w-12 h-12 hover:shadow-lg'
       } rounded-full flex items-center justify-center transition-all duration-300 shadow-md transform hover:scale-110 backdrop-blur-sm`}
       style={{
-        backgroundColor: '#5BA8D6',
-        color: 'white'
+        backgroundColor: '#7BCBFF',
+        color: '#FFFFFF'
       }}
       aria-label={label}
     >
-      <svg 
+      <IconComponent 
         className={`${mobile ? 'w-8 h-8' : 'w-7 h-7'}`}
-        fill="white" 
-        viewBox="0 0 24 24"
-      >
-        {iconMap[icon]}
-      </svg>
+      />
     </a>
   );
 }
+

@@ -1,7 +1,7 @@
-import Container from '../atoms/Container';
-import Heading from '../atoms/Heading';
-import Text from '../atoms/Text';
-import Button from '../atoms/Button';
+import { Container } from '../atoms/Container';
+import { Heading } from '../atoms/Heading';
+import { Text } from '../atoms/Text';
+import { Button } from '../atoms/Button';
 
 const blogPosts = [
   {
@@ -36,9 +36,9 @@ const blogPosts = [
   }
 ];
 
-export default function BlogSection() {
+export function ResourcesSection() {
   return (
-    <section className="py-20 lg:py-32 bg-gradient-soft-coral relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-gradient-soft-blue relative overflow-hidden">
       {/* Elementos decorativos */}
       <div className="absolute top-20 right-16 w-20 h-20 border border-lavender/20 rounded-full opacity-40 decorative-blob"></div>
       <div className="absolute bottom-32 left-20 w-16 h-16 bg-blue-main/20 rounded-full opacity-50 decorative-blob" style={{ animationDelay: '1s' }}></div>
@@ -52,9 +52,9 @@ export default function BlogSection() {
             Recursos y Blog
           </span>
           
-          <Heading level={2} className="text-4xl lg:text-5xl font-montserrat font-light mb-6 text-gray-800">
+          <Heading level={2} className="text-4xl lg:text-5xl font-montserrat font-light mb-6 text-coral-dark">
             Últimas
-            <span className="block font-dancing text-coral-dark text-5xl lg:text-6xl mt-2">
+            <span className="block font-dancing text-blue-dark text-5xl lg:text-6xl mt-2">
               reflexiones
             </span>
           </Heading>
@@ -169,7 +169,7 @@ export default function BlogSection() {
 
             <Heading level={3} className="text-3xl lg:text-4xl font-montserrat font-light mb-4">
               Suscríbete al
-              <span className="block font-dancing text-4xl lg:text-5xl text-mint mt-2">
+              <span className="block font-dancing text-blue-dark text-4xl lg:text-5xl mt-2">
                 newsletter
               </span>
             </Heading>

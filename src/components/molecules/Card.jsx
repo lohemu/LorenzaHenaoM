@@ -1,4 +1,4 @@
-export default function Card({ 
+export function Card({ 
   title, 
   children, 
   variant = 'default',

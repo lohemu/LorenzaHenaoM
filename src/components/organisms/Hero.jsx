@@ -1,16 +1,15 @@
-import Container from '../atoms/Container';
-import Heading from '../atoms/Heading';
-import Text from '../atoms/Text';
-import Button from '../atoms/Button';
-
+import { Container } from '../atoms/Container';
+import { Heading } from '../atoms/Heading';
+import { Text } from '../atoms/Text';
+import { Button } from '../atoms/Button';
 
 import FotoLoren from '../../assets/img/FotoLoren.png';
 
-export default function Hero() {
+export function Hero() {
   return (
     <>
       {/* Sección Principal - Hero */}
-      <section id="inicio" className="relative overflow-hidden bg-gradient-soft-blue min-h-screen flex items-center pattern-dots">
+      <section id="inicio" className="relative overflow-hidden bg-gradient-soft-coral min-h-screen flex items-center pattern-dots">
         {/* Elementos decorativos de fondo */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-4 h-4 bg-coral rounded-full opacity-60 animate-pulse"></div>
@@ -36,10 +35,10 @@ export default function Hero() {
 
             <Heading 
               level={1} 
-              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-montserrat font-light leading-tight mb-6 text-gray-800 animate-fade-in-up"
+              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-montserrat font-light leading-tight mb-6 text-coral-dark animate-fade-in-up"
             >
               Sé tu prioridad, organiza tu vida, 
-              <span className="block font-dancing text-coral-dark text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-2 animate-fade-in-left" style={{ animationDelay: '0.2s' }}>
+              <span className="block font-dancing text-blue-dark text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-2 animate-fade-in-left" style={{ animationDelay: '0.2s' }}>
                 recupera tu energía y reconecta con tu poder y tu valor.
               </span>
             </Heading>
@@ -64,6 +63,7 @@ export default function Hero() {
               >
                 Descubre más
               </Button>
+              <Button variant="secondary">Botón Azul</Button>
               <a 
                 href="tel:+573001234567" 
                 className="flex items-center gap-2 text-gray-600 hover:text-blue-main transition-colors duration-300 group"
@@ -77,43 +77,49 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Iconos de beneficios */}
+            {/* Iconos de beneficios con colores actualizados */}
             <div className="flex justify-center lg:justify-start gap-8 mt-12 opacity-70 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+              
+              {/* Icono Crecimiento - Menta con mayor contraste */}
               <div className="flex flex-col items-center gap-2 group">
-                <div className="w-12 h-12 bg-gradient-to-br from-mint to-mint-dark rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                <div className="w-12 h-12 hero-benefit-growth rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
-                <span className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors duration-300 font-montserrat">Crecimiento</span>
+                <span className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300 font-montserrat font-medium">Crecimiento</span>
               </div>
               
+              {/* Icono Bienestar - Azul con mayor contraste */}
               <div className="flex flex-col items-center gap-2 group">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-main to-blue-dark rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                <div className="w-12 h-12 hero-benefit-wellness rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 </div>
-                <span className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors duration-300 font-montserrat">Bienestar</span>
+                <span className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300 font-montserrat font-medium">Bienestar</span>
               </div>
               
+              {/* Icono Potencial - Lavanda con mayor contraste */}
               <div className="flex flex-col items-center gap-2 group">
-                <div className="w-12 h-12 bg-gradient-to-br from-lavender to-lavender-dark rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                <div className="w-12 h-12 hero-benefit-potential rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <span className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors duration-300 font-montserrat">Potencial</span>
+                <span className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300 font-montserrat font-medium">Potencial</span>
               </div>
               
+              {/* Icono Claridad - Coral con mayor contraste */}
               <div className="flex flex-col items-center gap-2 group">
-                <div className="w-12 h-12 bg-gradient-to-br from-coral to-coral-dark rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                <div className="w-12 h-12 hero-benefit-clarity rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
-                <span className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors duration-300 font-montserrar">Claridad</span>
+                <span className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300 font-montserrat font-medium">Claridad</span>
               </div>
+              
             </div>
           </div>
 
@@ -147,8 +153,6 @@ export default function Hero() {
           </div>
         </Container>
       </section>
-
-      
     </>
   );
 }

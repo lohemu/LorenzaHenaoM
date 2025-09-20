@@ -1,11 +1,11 @@
-import Container from '../atoms/Container';
-import Heading from '../atoms/Heading';
-import Text from '../atoms/Text';
-import Button from '../atoms/Button';
+import { Container } from '../atoms/Container';
+import { Heading } from '../atoms/Heading';
+import { Text } from '../atoms/Text';
+import { Button } from '../atoms/Button';
 
-export default function AboutSection() {
+export function AboutSection() {
   return (
-    <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-gradient-soft-lavender relative overflow-hidden">
       {/* Elementos decorativos */}
       <div className="absolute top-10 right-10 w-32 h-32 border border-blue-main/20 rounded-full opacity-40"></div>
       <div className="absolute bottom-20 left-10 w-24 h-24 bg-lavender/20 rounded-full opacity-50 decorative-blob"></div>
@@ -57,14 +57,14 @@ export default function AboutSection() {
           {/* Contenido */}
           <div className="order-1 lg:order-2">
             <div className="mb-6">
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-light to-lavender/30 text-blue-main rounded-full text-sm font-montserrat font-medium mb-4">
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-light to-lavender/30 text-lavender-dark rounded-full text-sm font-montserrat font-medium mb-4">
                 Sobre Mí
               </span>
             </div>
 
-            <Heading level={2} className="text-4xl lg:text-5xl font-montserrat font-light mb-6 text-gray-800">
+            <Heading level={2} className="text-4xl lg:text-5xl font-montserrat font-light mb-6 text-coral-dark">
               Hola, soy
-              <span className="block font-dancing text-coral-dark text-5xl lg:text-6xl mt-2">
+              <span className="block font-dancing text-blue-dark text-5xl lg:text-6xl mt-2">
                 Lorenza
               </span>
             </Heading>
@@ -97,6 +97,8 @@ export default function AboutSection() {
               >
                 Ver mis certificaciones
               </Button>
+
+              <Button variant="tertiary">Botón Lavanda</Button>
             </div>
           </div>
         </div>

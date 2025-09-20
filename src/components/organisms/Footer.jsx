@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import Container from '../atoms/Container';
-import Button from '../atoms/Button';
+import { Container } from '../atoms/Container';
+import { Button } from '../atoms/Button';
 
-export default function Footer() {
+export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (

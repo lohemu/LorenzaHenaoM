@@ -1,10 +1,11 @@
-import Hero from '../components/organisms/Hero';
-import AboutSection from '../components/organisms/AboutSection';
-import ServicesSection from '../components/organisms/ServicesSection';
-import TestimonialsSection from '../components/organisms/TestimonialsSection';
-import BlogSection from '../components/organisms/BlogSection';
-import CTASection from '../components/organisms/CTASection';
+import { Hero } from '../components/organisms/Hero';
+import { AboutSection } from '../components/organisms/AboutSection';
+import { ServicesSection } from '../components/organisms/ServicesSection';
+import { TestimonialsSection } from '../components/organisms/TestimonialsSection';
+import { ResourcesSection } from '../components/organisms/ResourcesSection';
+import { CTASection } from '../components/organisms/CTASection';
 import { ContactSection } from '../components/organisms/ContactSection';
+import { FeaturesSection } from '../components/organisms/FeaturesSection';
 
 
 export function Home() {
@@ -20,9 +21,9 @@ export function Home() {
         <AboutSection />
       </section>
 
-      {/* Sección Servicios */}
-      <section id="servicios">
-        <ServicesSection />
+      {/* Sección de Características */}
+      <section id="caracteristicas">
+        <FeaturesSection />
       </section>
 
       {/* Sección Testimonios */}
@@ -32,7 +33,7 @@ export function Home() {
 
        {/* Sección Blog */}
       <section id="blog">
-        <BlogSection />
+        <ResourcesSection />
       </section>
 
       {/* Sección CTA */}

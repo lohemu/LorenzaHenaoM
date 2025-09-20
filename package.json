@@ -13,6 +13,7 @@
     "@fontsource/montserrat": "^5.2.6",
     "@tailwindcss/vite": "^4.1.4",
     "autoprefixer": "^10.4.21",
+    "lucide-react": "^0.544.0",
     "postcss": "^8.5.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

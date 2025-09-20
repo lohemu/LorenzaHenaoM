@@ -1,9 +1,9 @@
-import Container from '../atoms/Container';
-import Heading from '../atoms/Heading';
-import Text from '../atoms/Text';
-import Button from '../atoms/Button';
+import { Container } from '../atoms/Container';
+import { Heading } from '../atoms/Heading';
+import { Text } from '../atoms/Text';
+import { Button } from '../atoms/Button';
 
-export default function CTASection() {
+export function CTASection() {
   return (
     <section className="py-20 lg:py-32 bg-gradient-to-br from-blue-main via-lavender to-coral relative overflow-hidden">
       {/* Elementos decorativos animados */}

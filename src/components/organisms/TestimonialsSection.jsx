@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import Container from '../atoms/Container';
-import Heading from '../atoms/Heading';
-import Text from '../atoms/Text';
+import { useState, useEffect } from 'react';
+import { Container } from '../atoms/Container';
+import { Heading } from '../atoms/Heading';
+import { Text } from '../atoms/Text';
 
 const testimonials = [
   {
@@ -38,8 +38,9 @@ const testimonials = [
   }
 ];
 
-export default function TestimonialsSection() {
+export function TestimonialsSection() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
 
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
@@ -49,8 +50,21 @@ export default function TestimonialsSection() {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
+  useEffect(() => {
+    let timer;
+    if (isAutoScrolling) {
+      timer = setInterval(nextTestimonial, 5000);
+    }
+    return () => clearInterval(timer);
+  }, [isAutoScrolling]);
+
   return (
-    <section className="py-20 lg:py-32 bg-gradient-soft-mint relative overflow-hidden">
+    <section 
+      className="py-20 lg:py-32 bg-gradient-soft-mint relative overflow-hidden" 
+      id="testimonios"
+      onMouseEnter={() => setIsAutoScrolling(false)}
+      onMouseLeave={() => setIsAutoScrolling(true)}
+    >
       {/* Elementos decorativos */}
       <div className="absolute top-16 right-20 w-24 h-24 border border-blue-main/20 rounded-full opacity-40 decorative-blob"></div>
       <div className="absolute bottom-20 left-16 w-16 h-16 bg-coral/20 rounded-full opacity-50 decorative-blob" style={{ animationDelay: '1s' }}></div>
@@ -64,9 +78,9 @@ export default function TestimonialsSection() {
             Testimonios
           </span>
           
-          <Heading level={2} className="text-4xl lg:text-5xl font-montserrat font-light mb-6 text-gray-800">
+          <Heading level={2} className="text-4xl lg:text-5xl font-montserrat font-light mb-6 text-coral-dark">
             Lo que dicen
-            <span className="block font-dancing text-coral-dark text-5xl lg:text-6xl mt-2">
+            <span className="block font-dancing text-blue-dark text-5xl lg:text-6xl mt-2">
               mis mentoreados
             </span>
           </Heading>
@@ -93,8 +107,8 @@ export default function TestimonialsSection() {
                 </div>
               </div>
 
-              {/* Contenido del testimonial */}
-              <div className="text-center mb-8">
+              {/* Contenido del testimonial con transición */}
+              <div className="text-center mb-8 transition-all duration-700 ease-in-out transform">
                 <Text className="text-xl lg:text-2xl text-gray-700 leading-relaxed font-montserrat font-light italic mb-6">
                   "{testimonials[currentTestimonial].content}"
                 </Text>

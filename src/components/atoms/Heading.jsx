@@ -1,4 +1,4 @@
-export default function Heading({ 
+export function Heading({ 
   level = 1, 
   variant = 'default',
   color = 'default',

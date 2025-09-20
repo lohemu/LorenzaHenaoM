@@ -442,7 +442,9 @@
 }
 
 /* Utilidades de color personalizadas */
+.text-blue-dark { color: #5BA8D6; }                         
 .text-blue-main { color: #7BCBFF; }
+.text-lavender-dark { color: #A693D4; }
 .text-lavender { color: #C7B8EA; }
 .text-coral { color: #FFB9A7; }
 .text-coral-dark { color: #FF6F61; }

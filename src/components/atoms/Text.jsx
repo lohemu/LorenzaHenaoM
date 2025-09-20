@@ -1,4 +1,4 @@
-export default function Text({ 
+export function Text({ 
   size = 'base',
   weight = 'normal',
   color = 'default',
