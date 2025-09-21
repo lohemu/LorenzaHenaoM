@@ -3,9 +3,9 @@ import { Heading } from '../atoms/Heading';
 import { Text } from '../atoms/Text';
 import { Button } from '../atoms/Button';
 
-import PerfilLorenza from '../../assets/img/PerfilLorenza.jpg';
+import Agenda from '../../assets/img/Agenda.JPG';
 
-export function AboutSection() {
+export function MentoringSection() {
   return (    
     <section className="relative overflow-hidden">
       <div className="space-y-0">
@@ -14,7 +14,7 @@ export function AboutSection() {
           {/* Columna izquierda - Imagen ocupando toda la altura */}
           <div className="flex justify-start">
             <img
-              src={PerfilLorenza}
+              src={Agenda}
               alt="Lorenza"
               className="w-full h-auto object-cover object-top"
             />
@@ -46,20 +46,7 @@ export function AboutSection() {
               Creo firmemente que uno puede lograr lo que se propone si tiene una mentalidad fuerte, disciplina y mucho compromiso con la persona más importante: uno mismo.
             </Text>
 
-            {/* Botón y texto alineados a la derecha */}
-            <div className="flex justify-end items-center">
-              <div className="text-right">
-                <p className="text-sm text-gray-500 font-montserrat italic mb-4">
-                  ¿Tienes alguna duda?
-                </p>
-                
-                <div className="bg-coral-dark text-white rounded-full p-3 shadow-lg cursor-pointer hover:bg-coral transition-colors inline-flex">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
+            
           </Container>
         </div>
       </div>           
