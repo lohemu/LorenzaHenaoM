@@ -6,34 +6,26 @@ import { Text } from '../atoms/Text';
 const testimonials = [
   {
     id: 1,
-    name: "María González",
-    role: "Emprendedora",
-    content: "Lorenza me ayudó a superar mis miedos y lanzar mi propio negocio. Su enfoque empático y sus herramientas prácticas fueron clave en mi transformación. Ahora tengo una empresa exitosa y, más importante, confianza en mí misma.",
-    avatar: "MG",
+    name: "Johanna",
+    role: "",
+    content: "Soy feliz porque gracias a Loren alcancé mis objetivos semanales y además tengo tiempo para hacer lo que me gusta. ¡Tiempo para mí!",
+    avatar: "J",
     rating: 5
   },
   {
     id: 2,
-    name: "Carlos Mendoza",
-    role: "Gerente de Ventas",
-    content: "El programa de mentoría me transformó completamente. Pasé de ser una persona tímida a liderar mi equipo con confianza. Las técnicas de comunicación que aprendí han mejorado no solo mi carrera, sino también mis relaciones personales.",
-    avatar: "CM",
+    name: "Gloria",
+    role: "",
+    content: "Soy feliz porque gracias a Loren alcancé mis objetivos semanales y además tengo tiempo para hacer lo que me gusta. ¡Tiempo para mí!",
+    avatar: "G",
     rating: 5
   },
   {
     id: 3,
-    name: "Ana Ruiz",
-    role: "Profesional en Transición",
-    content: "Después de 15 años en la misma empresa, me sentía perdida. Lorenza me guió para descubrir mi verdadera pasión y hacer una transición exitosa de carrera. Ahora trabajo en lo que amo y soy más feliz que nunca.",
-    avatar: "AR",
-    rating: 5
-  },
-  {
-    id: 4,
-    name: "David Silva",
-    role: "Estudiante Universitario",
-    content: "La mentoría me ayudó a definir mi rumbo profesional y desarrollar habilidades de liderazgo desde temprana edad. Las sesiones grupales fueron increíbles, conocí personas maravillosas y crecimos juntos.",
-    avatar: "DS",
+    name: "Alejandra",
+    role: "",
+    content: "Soy feliz porque gracias a Loren alcancé mis objetivos semanales y además tengo tiempo para hacer lo que me gusta. ¡Tiempo para mí!.",
+    avatar: "A",
     rating: 5
   }
 ];
@@ -74,20 +66,14 @@ export function TestimonialsSection() {
       <Container>
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 bg-gradient-to-r from-mint/40 to-blue-light text-blue-main rounded-full text-sm font-montserrat font-medium mb-4">
-            Testimonios
-          </span>
-          
+                   
           <Heading level={2} className="text-4xl lg:text-5xl font-montserrat font-light mb-6 text-coral-dark">
             Lo que dicen
             <span className="block font-dancing text-blue-dark text-5xl lg:text-6xl mt-2">
-              mis mentoreados
+              otras mujeres
             </span>
           </Heading>
           
-          <Text className="text-lg text-gray-600 max-w-2xl mx-auto font-montserrat">
-            Historias reales de transformación y crecimiento personal que inspirarán tu propio viaje.
-          </Text>
         </div>
 
         {/* Testimonios Carousel */}

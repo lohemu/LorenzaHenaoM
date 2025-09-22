@@ -6,6 +6,8 @@ import { Button } from '../atoms/Button';
 // Importar íconos de Lucide
 import { Download, Calendar, FileText, Clock } from "lucide-react";
 
+import Descarga from '../../assets/img/descarga.jpg';
+
 export function ResourcesSection() {
   // Datos de recursos - fácil de expandir
   const resources = [
@@ -16,7 +18,7 @@ export function ResourcesSection() {
       description: "Descubre cómo reorganizar tu semana para crear espacios de autocuidado y proyectos personales.",
       icon: Calendar,
       downloadLink: "#", // Reemplazar con enlace real
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", // Imagen de mockup de planificador
+      image: Descarga, // Imagen de mockup de planificador
       featured: true
     },
     // Recursos adicionales - comentados para agregar después
