@@ -48,25 +48,7 @@ export function Footer() {
                 <SocialLink href="#" icon="twitter" />
               </div>
 
-              {/* CTA Newsletter */}
-              <div className="glass-mint rounded-3xl p-6 border border-mint/20">
-                <h4 className="text-lg font-montserrat font-semibold mb-2 text-white">
-                  Mantente conectada
-                </h4>
-                <p className="text-gray-300 text-sm mb-4 font-montserrat">
-                  Recibe consejos exclusivos cada semana
-                </p>
-                <div className="flex gap-3">
-                  <input
-                    type="email"
-                    placeholder="tu@email.com"
-                    className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-coral transition-colors font-montserrat"
-                  />
-                  <Button className="bg-gradient-to-r from-coral to-coral-dark hover:from-coral-dark hover:to-coral px-6 py-2 rounded-full text-sm font-montserrat font-medium">
-                    Suscribir
-                  </Button>
-                </div>
-              </div>
+              
             </div>
 
             {/* Columna de navegación */}

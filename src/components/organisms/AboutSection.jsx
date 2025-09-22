@@ -6,7 +6,7 @@ import { Button } from '../atoms/Button';
 import PerfilLorenza from '../../assets/img/PerfilLorenza.jpg';
 
 export function AboutSection() {
-  return (    
+  return (
     <section className="relative overflow-hidden">
       <div className="space-y-0">
         {/* FILA SUPERIOR - 2 columnas */}
@@ -21,10 +21,10 @@ export function AboutSection() {
           </div>
 
           {/* Columna derecha - Heading y primer texto */}
-          <div className="relative z-1 flex flex-col justify-center">
+          <div className="relative z-1 flex flex-col justify-center overflow-visible">
             <Heading level={2} className="text-4xl lg:text-5xl py-5 font-montserrat font-light mb-4 text-lavender-dark">
               Hola, soy
-              <span className="block font-dancing text-blue-dark text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-1 animate-fade-in-left" style={{ animationDelay: '0.2s' }}>
+              <span className="block font-dancing text-gradient-animated text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-1 animate-fade-in-left p-2 overflow-visible" style={{ animationDelay: '0.9s' }}>
                 Lorenza
               </span>
             </Heading>
@@ -32,6 +32,7 @@ export function AboutSection() {
               Soy mentora, tallerista y artesana. "Ayudo a mujeres que se sienten abrumadas, cansadas y fuera de control a vivir una transformación que les permita reconectar con su poder y su valor. Las guío para que vivan más ligeras, seguras y llenas de alegría".
             </Text>
           </div>
+
         </div>
 
         {/* FILA INFERIOR - Una sola columna con textos y botón */}
@@ -52,7 +53,7 @@ export function AboutSection() {
                 <p className="text-sm text-gray-500 font-montserrat italic mb-4">
                   ¿Tienes alguna duda?
                 </p>
-                
+
                 <div className="bg-coral-dark text-white rounded-full p-3 shadow-lg cursor-pointer hover:bg-coral transition-colors inline-flex">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
@@ -62,7 +63,7 @@ export function AboutSection() {
             </div>
           </Container>
         </div>
-      </div>           
+      </div>
     </section>
   );
 }
