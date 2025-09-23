@@ -5,7 +5,7 @@ const smoothScrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId);
   if (element) {
     // Agregar offset para evitar que el header oculte el contenido
-    const headerOffset = 100; // Ajusta según la altura de tu header
+    const headerOffset = 80; // Ajusta según la altura de tu header
     const elementPosition = element.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -92,7 +92,7 @@ export function NavBar({ isMenuOpen, toggleMenu }) {
                 <MobileNavLink
                   onClick={toggleMenu}
                   onSectionClick={() => handleNavigation('hero')}
-                  active={location.hash === '#hero'}
+                  active={location.hash === '#hero' || location.hash === ''}
                 >
                   Inicio
                 </MobileNavLink>
@@ -189,4 +189,3 @@ export function NavBar({ isMenuOpen, toggleMenu }) {
     </>
   );
 }
-

@@ -52,17 +52,17 @@ export function ResourcesSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden bg-mint">
 
-      <div className="w-full py-5">
+      <div className="w-full py-5 bg-lavender-dark" >
         <Container>
           <div className="w-full text-center">
             <div className="relative z-1 flex flex-col justify-center items-center">
               <Heading
                 level={1}
-                className="text-3xl md:text-4xl py-5 mt-5 lg:text-4xl xl:text-5xl font-montserrat font-light leading-tight mb-0 text-lavender-dark animate-fade-in-up" >
+                className="text-3xl md:text-4xl py-5 mt-5 lg:text-4xl xl:text-5xl font-montserrat font-light leading-tight mb-0 text-white animate-fade-in-up" >
                 EMPIEZA HOY MISMO
-                <span className="block font-dancing text-blue-dark text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-2 animate-fade-in-left" style={{ animationDelay: '0.2s' }}>
+                <span className="block font-dancing text-mint text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-2 animate-fade-in-left" style={{ animationDelay: '0.2s' }}>
                   Descarga recursos gratuitos
                 </span>
               </Heading>             
@@ -73,34 +73,25 @@ export function ResourcesSection() {
           </div>
         </Container>
       </div>
-
-      
-      
-
         
-          <Container>
-            <div className="w-full text-center">
-              <div className="relative z-1 flex flex-col justify-center items-center">
-         {/* Grid de recursos */}
-         <div className="grid gap-8 md:gap-12">
-           {resources.map((resource, index) => (
-             <ResourceCard
-               key={resource.id}
-               resource={resource}
-               index={index}
-               isEven={index % 2 === 0}
-             />
-           ))}
-         </div>
-                
-              </div>
+      <Container>
+        <div className="w-full text-center">
+          <div className="relative z-1 flex flex-col justify-center items-center">
+            {/* Grid de recursos */}
+            <div className="grid gap-8 md:gap-12 m-10">
+              {resources.map((resource, index) => (
+                <ResourceCard
+                  key={resource.id}
+                  resource={resource}
+                  index={index}
+                  isEven={index % 2 === 0}
+                />
+              ))}
             </div>
-           
-          </Container>
-
-         
-        
-      
+                
+          </div>
+        </div>           
+      </Container>        
     </section>
   );
 }

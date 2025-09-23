@@ -30,6 +30,7 @@ export function Header() {
   const handleLogoClick = (e) => {
     e.preventDefault();
     handleNavigation('hero'); // Navegar al inicio/hero
+    setIsMenuOpen(false); // Cerrar menú móvil si está abierto
   };
 
   return (
@@ -61,7 +62,7 @@ export function Header() {
         <nav className="hidden lg:flex items-center gap-1">
           <NavLink
             onClick={() => handleNavigation('hero')}
-            active={location.hash === '#hero'}
+            active={location.hash === '#hero' || location.hash === ''}
           >
             Inicio
           </NavLink>

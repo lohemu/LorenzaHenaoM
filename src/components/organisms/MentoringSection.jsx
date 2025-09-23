@@ -31,7 +31,7 @@ export function MentoringSection() {
       </div>
 
       <div className="space-y-0">
-        {/* FILA SUPERIOR - 2 columnas */}
+        {/* FILA - 2 columnas */}
 
         <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[500px] bg-gradient-soft-lavender">
           <Container>
