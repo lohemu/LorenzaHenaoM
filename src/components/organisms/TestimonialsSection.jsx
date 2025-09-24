@@ -11,7 +11,7 @@ const testimonials = [
     id: 1,
     name: "Johanna",
     role: "",
-    content: "Soy feliz porque gracias a Loren alcancÃ© mis objetivos semanales y ademÃ¡s tengo tiempo para hacer lo que me gusta. Â¡Tiempo para mÃ­!",
+    content: "Soy feliz porque gracias a Loren alcancé mis objetivos semanales y además tengo tiempo para hacer lo que me gusta. Tiempo para mí!",
     avatar: Testimonio1,
     rating: 5
   },
@@ -19,7 +19,7 @@ const testimonials = [
     id: 2,
     name: "Gloria",
     role: "",
-    content: "Soy feliz porque gracias a Loren alcancÃ© mis objetivos semanales y ademÃ¡s tengo tiempo para hacer lo que me gusta. Â¡Tiempo para mÃ­!",
+    content: "Gracias a Loren alcancé mis objetivos semanales.",
     avatar: null, // Sin foto, mostrará la inicial
     rating: 5
   },
@@ -27,7 +27,7 @@ const testimonials = [
     id: 3,
     name: "Alejandra",
     role: "",
-    content: "Soy feliz porque gracias a Loren alcancÃ© mis objetivos semanales y ademÃ¡s tengo tiempo para hacer lo que me gusta. Â¡Tiempo para mÃ­!.",
+    content: "Tengo tiempo para hacer lo que me gusta. Tiempo para mí",
     avatar: null, // Sin foto, mostrará la inicial
     rating: 5
   }
@@ -102,25 +102,14 @@ export function TestimonialsSection() {
               {/* Contenido del testimonial */}
               <div className="text-center mb-8 transition-all duration-700 ease-in-out transform">
                 
-                {/* Icono de comillas superior */}
-                <div className="flex justify-center mb-6">
-                  <div className="relative">
-                    <Quote className="w-8 h-8 text-coral/30 transform rotate-180" />
-                    <Quote className="w-6 h-6 text-coral/50 absolute -top-1 -right-1 transform rotate-180" />
-                  </div>
-                </div>
+                 <div className="flex items-start gap-4 text-gray-800">
+              <Quote className="w-8 h-8 rotate-180 scale-x-[-1] mt-2 flex-shrink-0" />
+              <span className="text-2xl italic font-bold">{testimonials[currentTestimonial].content}</span>
+              <Quote className="w-8 h-8 mt-2 flex-shrink-0" />
+            </div>
 
-                <Text className="text-lg lg:text-xl text-gray-700 leading-relaxed font-montserrat font-light mb-6 relative">
-                  {testimonials[currentTestimonial].content}
-                </Text>
-
-                {/* Icono de comillas inferior */}
-                <div className="flex justify-center mb-8">
-                  <div className="relative">
-                    <Quote className="w-8 h-8 text-coral/30" />
-                    <Quote className="w-6 h-6 text-coral/50 absolute -bottom-1 -left-1" />
-                  </div>
-                </div>
+               
+             
 
                 {/* Avatar y datos */}
                 <div className="flex items-center justify-center gap-4 mb-6">
