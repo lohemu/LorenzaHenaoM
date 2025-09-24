@@ -74,7 +74,7 @@ export function ResourcesSection() {
         </Container>
       </div>
         
-      <Container>
+      <Container className="mb-40">
         <div className="w-full text-center">
           <div className="relative z-1 flex flex-col justify-center items-center">
             {/* Grid de recursos */}
