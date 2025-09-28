@@ -57,9 +57,9 @@ export  function SubscriptionSection() {
   const [isSubscribed, setIsSubscribed] = useState(false);
 
   // ⚠️ REEMPLAZA ESTA URL CON LA DE TU GOOGLE FORM
-  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/TU_FORM_ID/formResponse";
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSc9URBcwojHA4rmQ3_pldWodS_NT8FSxlBDKJa_3WTbUZsOXA/formResponse";
   // ⚠️ REEMPLAZA CON EL NAME DEL CAMPO EMAIL DE TU FORMULARIO (ej: entry.123456789)
-  const EMAIL_FIELD_NAME = "entry.123456789";
+  const EMAIL_FIELD_NAME = "entry.1012591520";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
