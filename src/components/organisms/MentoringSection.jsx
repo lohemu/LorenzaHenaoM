@@ -13,14 +13,17 @@ export function MentoringSection() {
     <section className="relative overflow-hidden">
 
       <div className="w-full py-5">
-        <Container>
+        <Container size="default" padding="default">
           <div className="w-full text-center">
             <div className="relative z-1 flex flex-col justify-center items-center">
               <Heading
                 level={1}
-                className="text-3xl md:text-4xl py-5 mt-5 lg:text-4xl xl:text-5xl font-montserrat font-light leading-tight mb-0 text-lavender-dark animate-fade-in-up" >
+                variant="light"
+                color="default"
+                className="py-5 mt-5 mb-0 animate-fade-in-up"
+              >
                 Mentorías personalizadas
-                <span className="block font-dancing text-blue-dark text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-2 animate-fade-in-left" style={{ animationDelay: '0.2s' }}>
+                <span className="block font-dancing text-gray-700 text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-2 animate-fade-in-left" style={{ animationDelay: '0.2s' }}>
                   para mujeres como tú
                 </span>
               </Heading>             
@@ -33,12 +36,18 @@ export function MentoringSection() {
       <div className="space-y-0">
         {/* FILA - 2 columnas */}
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[500px] bg-gradient-soft-lavender">
-          <Container>
+        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[500px] bg-gray-50">
+          <Container size="default" padding="default">
             <div className="w-full text-center">
               <div className="relative z-1 flex flex-col justify-center items-center">
 
-                <Text className="text-lg md:text-2xl text-gray-600 mb-0 max-w-4xl animate-fade-in-up font-montserrat w-full">
+                <Text 
+                  size="lg" 
+                  weight="normal" 
+                  color="default"
+                  variant="body"
+                  className="md:text-2xl mb-0 max-w-4xl animate-fade-in-up w-full"
+                >
                   En mis sesiones descubrirás cómo manejar tu tiempo sabiamente, dejar atrás la sensación de correr todo el día y crear hábitos que te devuelvan tu energía.
                 </Text>
               </div>
@@ -46,32 +55,56 @@ export function MentoringSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-8 py-8">
               {/* 1. Claridad en tus prioridades */}
               <div className="flex items-center gap-4 p-4">
-                <Target className="w-10 h-10 text-coral-dark flex-shrink-0" />
-                <Text className="text-lg md:text-xl text-gray-700 font-montserrat">
+                <Target className="w-10 h-10 text-gray-700 flex-shrink-0" />
+                <Text 
+                  size="lg" 
+                  weight="normal" 
+                  color="dark"
+                  variant="default"
+                  className="md:text-xl"
+                >
                   Claridad en tus prioridades
                 </Text>
               </div>
 
               {/* 2. Herramientas prácticas */}
               <div className="flex items-center gap-4 p-4">
-                <Settings className="w-10 h-10 text-coral-dark flex-shrink-0" />
-                <Text className="text-lg md:text-xl text-gray-700 font-montserrat">
+                <Settings className="w-10 h-10 text-gray-700 flex-shrink-0" />
+                <Text 
+                  size="lg" 
+                  weight="normal" 
+                  color="dark"
+                  variant="default"
+                  className="md:text-xl"
+                >
                   Herramientas prácticas para tu día a día
                 </Text>
               </div>
 
               {/* 3. Más tiempo */}
               <div className="flex items-center gap-4 p-4">
-                <Clock className="w-10 h-10 text-coral-dark flex-shrink-0" />
-                <Text className="text-lg md:text-xl text-gray-700 font-montserrat">
+                <Clock className="w-10 h-10 text-gray-700 flex-shrink-0" />
+                <Text 
+                  size="lg" 
+                  weight="normal" 
+                  color="dark"
+                  variant="default"
+                  className="md:text-xl"
+                >
                   Más tiempo para ti y tus proyectos
                 </Text>
               </div>
 
               {/* 4. Equilibrio y propósito */}
               <div className="flex items-center gap-4 p-4">
-                <Scale className="w-10 h-10 text-coral-dark flex-shrink-0" />
-                <Text className="text-lg md:text-xl text-gray-700 font-montserrat">
+                <Scale className="w-10 h-10 text-gray-700 flex-shrink-0" />
+                <Text 
+                  size="lg" 
+                  weight="normal" 
+                  color="dark"
+                  variant="default"
+                  className="md:text-xl"
+                >
                   Vida con equilibrio y propósito
                 </Text>
               </div>
