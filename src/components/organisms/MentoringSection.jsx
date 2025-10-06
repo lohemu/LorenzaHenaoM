@@ -3,7 +3,7 @@ import { Heading } from '../atoms/Heading';
 import { Text } from '../atoms/Text';
 import { Button } from '../atoms/Button';
 
-import Agenda from '../../assets/img/Agenda.JPG';
+import Agenda from '../../assets/img/Agenda.jpg';
 
 // Importar íconos de Lucide (corregidos)
 import { Target, Settings, Clock, Scale } from "lucide-react";
