@@ -55,7 +55,7 @@ export function TestimonialsSection() {
 
   return (
     <section 
-      className="grid lg:grid-cols-12 gap-8 lg:gap-6 items-center min-h-[600px] bg-gradient-soft-coral rounded-3xl p-8 lg:p-12" 
+      className="grid lg:grid-cols-12 gap-8 lg:gap-6 items-center min-h-[600px] bg-gradient-soft-lavender  p-8 lg:p-12" 
       id="testimonios"
       onMouseEnter={() => setIsAutoScrolling(false)}
       onMouseLeave={() => setIsAutoScrolling(true)}
@@ -87,7 +87,7 @@ export function TestimonialsSection() {
             testimonial={testimonials[currentTestimonial]}
             className="transition-all duration-700 ease-in-out transform"
             // Puedes personalizar cada aspecto desde aquí:
-             bgClassName="bg-gradient-soft-lavender rounded-3xl shadow-2xl relative overflow-hidden"
+             bgClassName="bg-mint rounded-3xl shadow-2xl relative overflow-hidden"
             // textClassName="text-coral-dark"
             // quoteClassName="text-mint-dark"
             // nameClassName="text-gray-900"
