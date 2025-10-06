@@ -15,7 +15,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative overflow-hidden">
+    <footer className="relative overflow-hidden bg-gradient-soft-lavender">
       {/* Elementos decorativos simples */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-32 h-32 border border-white rounded-full"></div>
@@ -39,7 +39,7 @@ export function Footer() {
                     color="black"
                     className="text-3xl"
                   >
-                    Lorenza Henao
+                    Lorenza Henao M
                   </Heading>
                   <Text
                     size="sm"
@@ -57,7 +57,6 @@ export function Footer() {
                 variant="relaxed"
                 className="mb-8 max-w-md"
               >
-                Transformando vidas a través de la mentoría personalizada.
                 Te acompaño en tu viaje hacia el crecimiento personal y profesional.
               </Text>
 
@@ -227,7 +226,7 @@ export function Footer() {
         {/* Footer bottom */}
         <div className="py-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <Text size="sm" color="light">
-            © {currentYear} Lorenza Henao. Todos los derechos reservados.
+            © {currentYear} Lorenza Henao M. Todos los derechos reservados.
           </Text>
 
           <div className="flex items-center gap-6">
