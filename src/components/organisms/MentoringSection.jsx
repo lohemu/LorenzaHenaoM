@@ -10,7 +10,7 @@ import { Target, Settings, Clock, Scale } from "lucide-react";
 
 export function MentoringSection() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden bg-gradient-soft-blue">
 
       <div className="w-full py-5">
         <Container size="default" padding="default">

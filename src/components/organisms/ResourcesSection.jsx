@@ -35,31 +35,33 @@ export function ResourcesSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-gray-50">
+    <section className="relative overflow-hidden bg-gradient-soft-lavender">
 
-      <div className="w-full py-5 bg-gray-800">
-        <Container>
+      <div className="w-full py-5 ">
+
+         <Container size="default" padding="default">
           <div className="w-full text-center">
             <div className="relative z-1 flex flex-col justify-center items-center">
               <Heading
                 level={1}
                 variant="light"
-                color="white"
-                className="text-3xl md:text-4xl py-5 mt-5 lg:text-4xl xl:text-5xl leading-tight mb-0 animate-fade-in-up"
+                color="default"
+                className="py-5 mt-5 mb-0 animate-fade-in-up"
               >
                 EMPIEZA HOY MISMO
-                <span className="block font-dancing text-gray-300 text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-2 animate-fade-in-left" style={{ animationDelay: '0.2s' }}>
+                <span className="block font-dancing text-gray-700 text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-2 animate-fade-in-left" style={{ animationDelay: '0.2s' }}>
                   Descarga recursos gratuitos
                 </span>
-              </Heading>             
-              <Text 
+              </Heading>         
+               <Text 
                 size="lg" 
                 color="light"
                 variant="body"
                 className="md:text-2xl mb-0 max-w-4xl animate-fade-in-up w-full"
               >
                 que te ayudarán a dar el primer paso hacia una vida más organizada y plena.
-              </Text>
+              </Text>    
+
             </div>
           </div>
         </Container>

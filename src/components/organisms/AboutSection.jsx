@@ -8,7 +8,7 @@ import PerfilLorenza from '../../assets/img/PerfilLorenza.jpg';
 
 export function AboutSection() {
   return (
-    <section id="sobre-mi" className="relative overflow-hidden py-12 lg:py-16">
+    <section id="sobre-mi" className="relative overflow-hidden py-12 lg:py-16 ">
       <div className="space-y-0">
         {/* FILA SUPERIOR - 2 columnas */}
         <Container>

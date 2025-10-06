@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative overflow-hidden min-h-screen flex items-center pattern-dots bg-blue-light"
+      className="relative overflow-hidden min-h-screen flex items-center bg-gradient-soft-lavender"
     >
       <Container className="relative z-1 py-0 grid lg:grid-cols-2 gap-12 items-center h-full">
         <div className="text-center lg:text-left">

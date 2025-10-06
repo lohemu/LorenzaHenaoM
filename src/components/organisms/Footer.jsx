@@ -15,7 +15,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative overflow-hidden bg-gradient-soft-lavender">
+    <footer className="relative overflow-hidden bg-lavender">
       {/* Elementos decorativos simples */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-32 h-32 border border-white rounded-full"></div>
@@ -97,7 +97,7 @@ export function Footer() {
                 <li>
                   <button
                     onClick={() => handleFooterNavigation('hero')}
-                    className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat"
+                    className="text-gray-600 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat"
                   >
                     Inicio
                   </button>
@@ -105,7 +105,7 @@ export function Footer() {
                 <li>
                   <button
                     onClick={() => handleFooterNavigation('sobre-mi')}
-                    className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat"
+                    className="text-gray-600 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat"
                   >
                     Sobre Mí
                   </button>
@@ -113,7 +113,7 @@ export function Footer() {
                 <li>
                   <button
                     onClick={() => handleFooterNavigation('mentorias')}
-                    className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat"
+                    className="text-gray-600 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat"
                   >
                     Mentorías
                   </button>
@@ -121,7 +121,7 @@ export function Footer() {
                 <li>
                   <button
                     onClick={() => handleFooterNavigation('recursos')}
-                    className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat"
+                    className="text-gray-600 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat"
                   >
                     Recursos
                   </button>
@@ -129,7 +129,7 @@ export function Footer() {
                 <li>
                   <button
                     onClick={() => handleFooterNavigation('testimonios')}
-                    className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat"
+                    className="text-gray-600 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat"
                   >
                     Testimonios
                   </button>
@@ -137,7 +137,7 @@ export function Footer() {
                 <li>
                   <button
                     onClick={() => handleFooterNavigation('contacto')}
-                    className="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat"
+                    className="text-gray-600 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block font-montserrat"
                   >
                     Contacto
                   </button>

@@ -249,6 +249,13 @@
   background: linear-gradient(135deg, #F2FBFF, #E8F7FF);
 }
 
+
+.bg-gradient-blue-lavender {
+  background: linear-gradient(135deg, #7BCBFF, #C7B8EA);
+}
+
+
+
 .bg-gradient-soft-lavender {
   background: linear-gradient(135deg, #F0EDFA, #E8E2F5);
 }

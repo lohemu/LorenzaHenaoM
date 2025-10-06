@@ -6,8 +6,15 @@ export function Card({
   variant = 'default',
   hover = true,
   className = '',
-  // Props específicos para testimonios
-  testimonial = null
+  // Props especificos para testimonios
+  testimonial = null,
+  // Nuevas props para personalización
+  bgClassName = '',
+  textClassName = '',
+  quoteClassName = '',
+  avatarClassName = '',
+  nameClassName = '',
+  decorativeBlobClassName = ''
 }) {
   const baseStyles = 'rounded-3xl p-6 transition-all duration-300';
   
@@ -25,7 +32,6 @@ export function Card({
     elevated: 'bg-white shadow-2xl border border-gray-50 hover:shadow-3xl',
     minimal: 'bg-gray-50/50 hover:bg-gray-100/50',
     outlined: 'bg-transparent border-2 border-blue-main/20 hover:border-blue-main/40 hover:bg-blue-light/30',
-    // Nuevo variant específico para testimonios
     testimonial: 'bg-white rounded-3xl shadow-2xl glass relative overflow-hidden'
   };
 
@@ -78,8 +84,10 @@ export function Card({
     }
     
     // Si no hay imagen, mostramos la inicial
+    // Si se proporciona avatarClassName, lo usamos; si no, usamos el gradiente por defecto
+    const defaultAvatarClasses = avatarClassName || 'bg-gradient-to-br from-blue-main to-lavender';
     return (
-      <div className="w-14 h-14 bg-gradient-to-br from-blue-main to-lavender rounded-full flex items-center justify-center shadow-lg text-white font-montserrat font-bold text-base">
+      <div className={`w-14 h-14 ${defaultAvatarClasses} rounded-full flex items-center justify-center shadow-lg text-white font-montserrat font-bold text-base`}>
         {testimonial.name.charAt(0).toUpperCase()}
       </div>
     );
@@ -89,27 +97,34 @@ export function Card({
 
   // Si es un testimonio, renderizar el layout específico
   if (testimonial) {
+    // Usar valores por defecto si no se proporcionan las props personalizadas
+    const testimonialBg = bgClassName || 'bg-white rounded-3xl shadow-2xl relative overflow-hidden';
+    const testimonialText = textClassName || 'text-gray-800';
+    const quoteColor = quoteClassName || 'text-gray-800';
+    const nameColor = nameClassName || 'text-gray-800';
+    const blobBg = decorativeBlobClassName || 'bg-gradient-to-br from-blue-main/10 to-lavender/10';
+
     return (
-      <div className={`${variants.testimonial} p-8 lg:p-10`}>
+      <div className={`${testimonialBg} p-8 lg:p-10`}>
         {/* Elementos decorativos en la tarjeta */}
-        <div className="absolute top-6 right-6 w-16 h-16 bg-gradient-to-br from-blue-main/10 to-lavender/10 rounded-full opacity-50 decorative-blob"></div>
+        <div className={`absolute top-6 right-6 w-16 h-16 ${blobBg} rounded-full opacity-50 decorative-blob`}></div>
         <div className="absolute bottom-6 left-6 w-12 h-12 bg-gradient-to-br from-coral/10 to-mint/10 rounded-full opacity-40 decorative-blob" style={{ animationDelay: '2s' }}></div>
 
         <div className="relative z-10">
           {/* Contenido del testimonial */}
           <div className="text-center mb-8 transition-all duration-700 ease-in-out transform">
             {/* Quote con el contenido */}
-            <div className="flex items-start gap-4 text-gray-800 mb-6">
-              <Quote className="w-8 h-8 rotate-180 scale-x-[-1] mt-2 flex-shrink-0" />
-              <span className="text-2xl italic font-bold">{testimonial.content}</span>
-              <Quote className="w-8 h-8 mt-2 flex-shrink-0" />
+            <div className="flex items-start gap-4 mb-6">
+              <Quote className={`w-8 h-8 rotate-180 scale-x-[-1] mt-2 flex-shrink-0 ${quoteColor}`} />
+              <span className={`text-2xl italic font-bold ${testimonialText}`}>{testimonial.content}</span>
+              <Quote className={`w-8 h-8 mt-2 flex-shrink-0 ${quoteColor}`} />
             </div>
 
             {/* Avatar y datos */}
             <div className="flex items-center justify-center gap-4">
               {renderAvatar(testimonial)}
               <div className="text-left">
-                <div className="font-montserrat font-semibold text-gray-800 text-lg">
+                <div className={`font-montserrat font-semibold text-lg ${nameColor}`}>
                   {testimonial.name}
                 </div>
                 {testimonial.role && (
@@ -146,3 +161,4 @@ export function Card({
     </div>
   );
 }
+
