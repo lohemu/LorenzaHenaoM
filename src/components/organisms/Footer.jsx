@@ -165,7 +165,7 @@ export function Footer() {
                       Email
                     </Text>
                     <Text size="base" color="white-muted">
-                      hola@lorenzahenao.com
+                      hola@lorenhm.com
                     </Text>
                   </div>
                 </div>
