@@ -174,14 +174,7 @@ export function Footer() {
                   <div className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center">
                     <Phone className="w-5 h-5 text-gray-300" />
                   </div>
-                  <div>
-                    <Text size="sm" color="light">
-                      Teléfono
-                    </Text>
-                    <Text size="base" color="white-muted">
-                      +57 (300) 123-4567
-                    </Text>
-                  </div>
+                 
                 </div>
 
                 <div className="flex items-center gap-3">
