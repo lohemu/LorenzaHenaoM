@@ -7,24 +7,24 @@ import { Card } from './../molecules/Card';
 import Testimonio1 from '../../assets/img/Testimonio1.jpg';
 
 const testimonials = [
+  // {
+  //   id: 1,
+  //   name: "Johanna",
+  //   role: "",
+  //   content: "Soy feliz porque gracias a Loren alcancé mis objetivos semanales y además tengo tiempo para hacer lo que me gusta. Tiempo para mí!",
+  //   avatar: null,
+  //   rating: 5
+  // },
+  // {
+  //   id: 2,
+  //   name: "Gloria",
+  //   role: "",
+  //   content: "Gracias a Loren alcancé mis objetivos semanales.",
+  //   avatar: null,
+  //   rating: 5
+  // },
   {
     id: 1,
-    name: "Johanna",
-    role: "",
-    content: "Soy feliz porque gracias a Loren alcancé mis objetivos semanales y además tengo tiempo para hacer lo que me gusta. Tiempo para mí!",
-    avatar: null,
-    rating: 5
-  },
-  {
-    id: 2,
-    name: "Gloria",
-    role: "",
-    content: "Gracias a Loren alcancé mis objetivos semanales.",
-    avatar: null,
-    rating: 5
-  },
-  {
-    id: 3,
     name: "Alejandra",
     role: "",
     content: "Tengo tiempo para hacer lo que me gusta. Tiempo para mí",
