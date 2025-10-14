@@ -206,7 +206,7 @@ export function Footer() {
                   size="medium"
                   onClick={() => {
                     // Opción A: Ir al perfil general
-                    window.open('https://calendly.com/luisgt-movil/30min', '_blank', 'noopener,noreferrer');
+                    window.open('https://calendly.com/lohemu-lorenhm/new-meeting', '_blank', 'noopener,noreferrer');
 
                     // Opción B: Abrir WhatsApp o email como respaldo
                     // window.open('https://wa.me/573001234567', '_blank');

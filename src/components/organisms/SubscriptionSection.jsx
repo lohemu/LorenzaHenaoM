@@ -10,9 +10,11 @@ export function SubscriptionSection() {
   const [isSubscribed, setIsSubscribed] = useState(false);
 
   // ⚠️ REEMPLAZA ESTA URL CON LA DE TU GOOGLE FORM
-  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSc9URBcwojHA4rmQ3_pldWodS_NT8FSxlBDKJa_3WTbUZsOXA/formResponse";
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfonbsBzYGN6c3_GBcr2vKpqLCAHeD--C-_yfuC0JY-eDpG8g/formResponse";
+
+  // https://docs.google.com/forms/d/e/1FAIpQLSfonbsBzYGN6c3_GBcr2vKpqLCAHeD--C-_yfuC0JY-eDpG8g/viewform?usp=header
   // ⚠️ REEMPLAZA CON EL NAME DEL CAMPO EMAIL DE TU FORMULARIO (ej: entry.123456789)
-  const EMAIL_FIELD_NAME = "entry.1012591520";
+  const EMAIL_FIELD_NAME = "entry.1479482821";
 
   const handleSubmit = async (e) => {
     e.preventDefault();

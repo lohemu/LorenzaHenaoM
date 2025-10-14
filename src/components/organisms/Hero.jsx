@@ -49,14 +49,14 @@ export function Hero() {
               size="large"
               onClick={() => {
                 // Opción A: Ir al perfil general
-                window.open('https://calendly.com/luisgt-movil/30min', '_blank', 'noopener,noreferrer');
+                window.open('https://calendly.com/lohemu-lorenhm/new-meeting', '_blank', 'noopener,noreferrer');
 
                 // Opción B: Abrir WhatsApp o email como respaldo
                 // window.open('https://wa.me/573001234567', '_blank');
               }}
               className="px-8 py-4 text-lg"
             >
-              Agendate
+              Agéndate
             </Button>
           </div>
 

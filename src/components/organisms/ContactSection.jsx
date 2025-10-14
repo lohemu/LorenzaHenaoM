@@ -25,7 +25,7 @@ export function ContactSection() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: '906eb827-1d8e-471f-b742-3e76624d0c60', // Reemplaza con tu access key
+          access_key: '15a23efa-20e7-4d93-ab61-cc4947f63f72', // Reemplaza con tu access key
           name: formData.name,
           email: formData.email,
           message: formData.message,
