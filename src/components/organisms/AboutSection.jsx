@@ -31,7 +31,7 @@ export function AboutSection() {
                 className="text-4xl lg:text-5xl mb-6"
               >
                 Hola, soy
-                <span className="block font-dancing text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-2 animate-fade-in-left" 
+                <span className="block font-dancing text-6xl md:text-4xl lg:text-6xl xl:text-7xl mt-2 animate-fade-in-left" 
                       style={{ animationDelay: '0.9s' }}>
                   Lorenza
                 </span>
@@ -42,7 +42,7 @@ export function AboutSection() {
                 variant="body-large"
                 className="md:text-2xl mb-6 animate-fade-in-up"
               >
-                Soy mentora, tallerista y artesana. "Ayudo a mujeres que se sienten abrumadas, cansadas y fuera de control a vivir una transformación que les permita reconectar con su poder y su valor. Las guío para que vivan más ligeras, seguras y llenas de alegría".
+                Soy mentora, tallerista y artesana. "Ayudo a mujeres que se sienten abrumadas, cansadas y fuera de control; a vivir una transformación que les permita reconectar con su poder y su valor. Las guío para que vivan más ligeras, seguras y llenas de alegría".
               </Text>
             </div>
           </div>
@@ -58,7 +58,7 @@ export function AboutSection() {
               className="md:text-2xl mb-8 animate-fade-in-up" 
               style={{ animationDelay: '0.4s' }}
             >
-              También soy mamá, docente, investigadora y emprendedora y todas estas diferentes facetas me han llevado a recopilar experiencia en el manejo del tiempo de forma sabia. Planear, organizar y ejecutar tareas en busca de objetivos concretos es algo que puede ser divertido y generar una enorme satisfacción si se hace con intención y propósito.
+              También soy mamá, docente, investigadora y emprendedora; y todas estas diferentes facetas me han llevado a recopilar experiencia en el manejo del tiempo de forma sabia. Planear, organizar y ejecutar tareas en busca de objetivos concretos es algo que puede ser divertido y generar una enorme satisfacción si se hace con intención y propósito.
             </Text>
 
             <Text 
