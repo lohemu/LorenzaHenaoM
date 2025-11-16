@@ -8,7 +8,7 @@ import { DownloadModal } from '../molecules/DownloadModal';
 // Importar íconos de Lucide
 import { Download, Calendar, FileText } from "lucide-react";
 
-import Descarga from '../../assets/img/descarga.jpg';
+import Descarga from '../../assets/img/descarga.png';
 import Calendario from '../../assets/img/Calendario.png';
 
 export function ResourcesSection() {
