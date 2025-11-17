@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Home } from './pages/Home';
 import { Header } from './components/organisms/Header';
 import { Footer } from './components/organisms/Footer';
+import { TallerNavidad } from './pages/TallerNavidad';
 
 // Componente para controlar el scroll
 function ScrollToTop() {
@@ -20,6 +21,7 @@ export function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/taller-navidad" element={<TallerNavidad />} />
       </Routes>
       <Footer />
     </Router>
