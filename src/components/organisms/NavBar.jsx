@@ -199,7 +199,7 @@ export function NavBar({ isMenuOpen, toggleMenu }) {
                   <div className="flex justify-center gap-4">
                     <SocialIcon 
                       icon={Facebook}
-                      href="https://facebook.com/lorenzahenao"
+                      href="https://facebook.com/LorenzaHenaoM"
                       bgColor="bg-gray-700"
                       iconColor="text-white"
                       hoverBg="hover:bg-gray-900"
@@ -207,7 +207,7 @@ export function NavBar({ isMenuOpen, toggleMenu }) {
                     />
                     <SocialIcon 
                       icon={Instagram}
-                      href="https://instagram.com/lorenzahenao"
+                      href="https://instagram.com/lorenzahenaom"
                       bgColor="bg-gray-700"
                       iconColor="text-white"
                       hoverBg="hover:bg-gray-900"
@@ -215,7 +215,7 @@ export function NavBar({ isMenuOpen, toggleMenu }) {
                     />
                     <SocialIcon 
                       icon={Linkedin}
-                      href="https://linkedin.com/in/lorenzahenao"
+                      href="https://linkedin.com/in/lorenzahenaom"
                       bgColor="bg-gray-700"
                       iconColor="text-white"
                       hoverBg="hover:bg-gray-900"
